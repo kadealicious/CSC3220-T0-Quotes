@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.3.3 on Mon Mar 7 14:49:14 2022
+-- File generated with SQLiteStudio v3.3.3 on Mon Mar 7 15:21:37 2022
 --
 -- Text encoding used: System
 --
@@ -18,16 +18,7 @@ CREATE TABLE categories (categoryID INTEGER PRIMARY KEY, "category-name" STRING 
 INSERT INTO categories (categoryID, "category-name") VALUES (-1, 'Miscellaneous');
 INSERT INTO categories (categoryID, "category-name") VALUES (1, 'Inspirational');
 INSERT INTO categories (categoryID, "category-name") VALUES (2, 'Funny');
-INSERT INTO categories (categoryID, "category-name") VALUES (3, 'Realistic');
 INSERT INTO categories (categoryID, "category-name") VALUES (4, 'Motivational');
-
--- Table: categoryX
-CREATE TABLE categoryX (categoryXID INTEGER PRIMARY KEY, quoteID INTEGER REFERENCES quote (quoteID), categoryID INTEGER REFERENCES categories (categoryID));
-INSERT INTO categoryX (categoryXID, quoteID, categoryID) VALUES (1, 1, 1);
-INSERT INTO categoryX (categoryXID, quoteID, categoryID) VALUES (3, 3, 2);
-INSERT INTO categoryX (categoryXID, quoteID, categoryID) VALUES (4, 2, 2);
-INSERT INTO categoryX (categoryXID, quoteID, categoryID) VALUES (5, 5, 4);
-INSERT INTO categoryX (categoryXID, quoteID, categoryID) VALUES (6, 4, -1);
 
 -- Table: quote
 CREATE TABLE quote (quoteID INTEGER PRIMARY KEY, authorID INTEGER REFERENCES author (authorID) NOT NULL, categoryID INTEGER REFERENCES categories (categoryID), "quote-string" STRING, "quote-date" DATE);
