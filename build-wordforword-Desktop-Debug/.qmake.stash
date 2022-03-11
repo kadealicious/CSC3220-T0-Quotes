@@ -21,3 +21,5 @@ QMAKE_CXX.LIBDIRS = \
     c:/mingw/mingw32/lib \
     c:/mingw/lib
 QMAKE_LICHECK_TIMESTAMP = "Fri Mar 4"
+QMAKE_LICHECK_TIMESTAMP = "Wed Mar 9"
+QMAKE_LICHECK_TIMESTAMP = "Fri Mar 11"

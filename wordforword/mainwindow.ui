@@ -148,13 +148,6 @@
     <addaction name="addauthor"/>
     <addaction name="addcategory"/>
    </widget>
-   <widget class="QMenu" name="menuSort_by">
-    <property name="title">
-     <string>Sort by</string>
-    </property>
-    <addaction name="sortby-author"/>
-    <addaction name="sortby-category"/>
-   </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>Edit</string>
@@ -170,7 +163,6 @@
     <addaction name="deletecategory"/>
    </widget>
    <addaction name="menuWord_ForWord"/>
-   <addaction name="menuSort_by"/>
    <addaction name="menuEdit"/>
    <addaction name="menuDelete"/>
   </widget>

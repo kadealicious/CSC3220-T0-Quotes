@@ -13,6 +13,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // Initialize database.
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    QString db_path = "C:/Users/kades/OneDrive/Documents/school/2021-2022/winter/Apps. Programming/CSC3220-T0-Quotes/wordforword-db.db";
+    db.setDatabaseName(db_path);
+
+    // Open database.
+    db.open();
+    if(db.isOpen()) {
+        qDebug() << "Connection success!";
+    } else {
+        qDebug() << "ERROR: Connection failed!";
+    }
 }
 
 MainWindow::~MainWindow()
@@ -68,7 +81,6 @@ void MainWindow::on_deleteauthor_triggered()
     deleteUI.exec();
 }
 
-
 void MainWindow::on_deletecategory_triggered()
 {
     deletecategory deleteUI;
@@ -76,3 +88,16 @@ void MainWindow::on_deletecategory_triggered()
     deleteUI.exec();
 }
 
+void MainWindow::on_button_category_clicked()
+{
+    hide();
+    sortby_categoryUI = new sortby_category(this);
+    sortby_categoryUI->show();
+}
+
+void MainWindow::on_button_author_clicked()
+{
+    hide();
+    sortby_authorUI = new sortby_author(this);
+    sortby_authorUI->show();
+}

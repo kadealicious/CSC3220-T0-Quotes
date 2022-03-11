@@ -44,7 +44,6 @@ public:
     QPushButton *button_author;
     QMenuBar *menubar;
     QMenu *menuWord_ForWord;
-    QMenu *menuSort_by;
     QMenu *menuEdit;
     QMenu *menuDelete;
     QStatusBar *statusbar;
@@ -116,8 +115,6 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 26));
         menuWord_ForWord = new QMenu(menubar);
         menuWord_ForWord->setObjectName(QString::fromUtf8("menuWord_ForWord"));
-        menuSort_by = new QMenu(menubar);
-        menuSort_by->setObjectName(QString::fromUtf8("menuSort_by"));
         menuEdit = new QMenu(menubar);
         menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuDelete = new QMenu(menubar);
@@ -128,14 +125,11 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuWord_ForWord->menuAction());
-        menubar->addAction(menuSort_by->menuAction());
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuDelete->menuAction());
         menuWord_ForWord->addAction(addquote);
         menuWord_ForWord->addAction(addauthor);
         menuWord_ForWord->addAction(addcategory);
-        menuSort_by->addAction(sortby_author);
-        menuSort_by->addAction(sortby_category);
         menuEdit->addAction(editauthor);
         menuEdit->addAction(editcategory);
         menuDelete->addAction(deleteauthor);
@@ -196,7 +190,6 @@ public:
         button_category->setText(QCoreApplication::translate("MainWindow", "Category", nullptr));
         button_author->setText(QCoreApplication::translate("MainWindow", "Author", nullptr));
         menuWord_ForWord->setTitle(QCoreApplication::translate("MainWindow", "Add", nullptr));
-        menuSort_by->setTitle(QCoreApplication::translate("MainWindow", "Sort by", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuDelete->setTitle(QCoreApplication::translate("MainWindow", "Delete", nullptr));
     } // retranslateUi

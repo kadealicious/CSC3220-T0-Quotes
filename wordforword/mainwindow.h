@@ -2,6 +2,16 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QSqlDatabase>
+#include<QSqlQuery>
+#include<QSqlQueryModel>
+#include<QDataWidgetMapper>
+#include<QSqlError>
+#include<QLineEdit>
+#include<QDebug>
+
+#include"sortby_category.h"
+#include"sortby_author.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,6 +22,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    QSqlDatabase db;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -30,7 +41,13 @@ private slots:
 
     void on_deletecategory_triggered();
 
+    void on_button_category_clicked();
+
+    void on_button_author_clicked();
+
 private:
     Ui::MainWindow *ui;
+    sortby_category *sortby_categoryUI;
+    sortby_author *sortby_authorUI;
 };
 #endif // MAINWINDOW_H

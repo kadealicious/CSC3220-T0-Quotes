@@ -9,6 +9,8 @@ debug/editcategory.o
 debug/editquote.o
 debug/main.o
 debug/mainwindow.o
+debug/sortby_author.o
+debug/sortby_category.o
 debug/moc_addauthor.o
 debug/moc_addcategory.o
 debug/moc_addquote.o
@@ -19,3 +21,5 @@ debug/moc_editauthor.o
 debug/moc_editcategory.o
 debug/moc_editquote.o
 debug/moc_mainwindow.o
+debug/moc_sortby_author.o
+debug/moc_sortby_category.o

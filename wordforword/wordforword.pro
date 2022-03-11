@@ -1,4 +1,5 @@
 QT       += core gui
+QT		 += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,7 +20,9 @@ SOURCES += \
     editcategory.cpp \
     editquote.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sortby_author.cpp \
+    sortby_category.cpp
 
 HEADERS += \
     addauthor.h \
@@ -31,7 +34,9 @@ HEADERS += \
     editauthor.h \
     editcategory.h \
     editquote.h \
-    mainwindow.h
+    mainwindow.h \
+    sortby_author.h \
+    sortby_category.h
 
 FORMS += \
     addauthor.ui \
@@ -43,7 +48,9 @@ FORMS += \
     editauthor.ui \
     editcategory.ui \
     editquote.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    sortby_author.ui \
+    sortby_category.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

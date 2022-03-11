@@ -279,6 +279,7 @@ Makefile: ../wordforword/wordforword.pro C:/Qt/Qt5.15.8/5.15.8/mingw81_32/mkspec
 		../wordforword/wordforword.pro \
 		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Widgets.prl \
 		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Gui.prl \
+		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Sql.prl \
 		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Core.prl \
 		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/qtmain.prl \
 		C:/Qt/Qt5.15.8/5.15.8/mingw81_32/mkspecs/features/build_pass.prf
@@ -492,6 +493,7 @@ C:/Qt/Qt5.15.8/5.15.8/mingw81_32/mkspecs/features/lex.prf:
 ../wordforword/wordforword.pro:
 C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Widgets.prl:
 C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Gui.prl:
+C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Sql.prl:
 C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/Qt5Core.prl:
 C:/Qt/Qt5.15.8/5.15.8/mingw81_32/lib/qtmain.prl:
 C:/Qt/Qt5.15.8/5.15.8/mingw81_32/mkspecs/features/build_pass.prf:

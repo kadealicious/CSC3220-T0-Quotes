@@ -9,6 +9,8 @@ release/editcategory.o
 release/editquote.o
 release/main.o
 release/mainwindow.o
+release/sortby_author.o
+release/sortby_category.o
 release/moc_addauthor.o
 release/moc_addcategory.o
 release/moc_addquote.o
@@ -19,3 +21,5 @@ release/moc_editauthor.o
 release/moc_editcategory.o
 release/moc_editquote.o
 release/moc_mainwindow.o
+release/moc_sortby_author.o
+release/moc_sortby_category.o
