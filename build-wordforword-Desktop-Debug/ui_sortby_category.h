@@ -20,16 +20,16 @@ QT_BEGIN_NAMESPACE
 class Ui_sortby_category
 {
 public:
-    QTableView *tableView;
+    QTableView *maintable;
 
     void setupUi(QDialog *sortby_category)
     {
         if (sortby_category->objectName().isEmpty())
             sortby_category->setObjectName(QString::fromUtf8("sortby_category"));
         sortby_category->resize(801, 596);
-        tableView = new QTableView(sortby_category);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(50, 50, 451, 501));
+        maintable = new QTableView(sortby_category);
+        maintable->setObjectName(QString::fromUtf8("maintable"));
+        maintable->setGeometry(QRect(50, 50, 701, 501));
 
         retranslateUi(sortby_category);
 
