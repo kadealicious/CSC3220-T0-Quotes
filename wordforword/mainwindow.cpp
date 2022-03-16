@@ -26,11 +26,20 @@ MainWindow::MainWindow(QWidget *parent)
     } else {
         qDebug() << "ERROR: Connection failed!";
     }
+
+    sortby_categoryUI = new sortby_category(this);
+    sortby_categoryUI->hide();
+
+    sortby_authorUI = new sortby_author(this);
+    sortby_authorUI->hide();
 }
 
 MainWindow::~MainWindow()
 {
+    db.close();
     delete ui;
+    delete sortby_categoryUI;
+    delete sortby_authorUI;
 }
 
 
@@ -91,13 +100,11 @@ void MainWindow::on_deletecategory_triggered()
 void MainWindow::on_button_category_clicked()
 {
     hide();
-    sortby_categoryUI = new sortby_category(this);
     sortby_categoryUI->show();
 }
 
 void MainWindow::on_button_author_clicked()
 {
     hide();
-    sortby_authorUI = new sortby_author(this);
     sortby_authorUI->show();
 }

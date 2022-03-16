@@ -26,12 +26,12 @@ sortby_category::sortby_category(QWidget *parent) :
 
     // Visual modifications to table.
     table->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    table->horizontalHeader()->setMaximumSectionSize(450);
+    table->horizontalHeader()->setMaximumSectionSize(525);
     table->resizeRowsToContents();
 
     table->setWordWrap(true);
     table->setColumnHidden(0, true);
-    table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    // table->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     table->show();
 }
@@ -40,3 +40,11 @@ sortby_category::~sortby_category()
 {
     delete ui;
 }
+
+void sortby_category::on_pushButton_clicked()
+{
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}
+

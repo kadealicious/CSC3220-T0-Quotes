@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
@@ -21,6 +22,7 @@ class Ui_sortby_category
 {
 public:
     QTableView *maintable;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *sortby_category)
     {
@@ -29,7 +31,10 @@ public:
         sortby_category->resize(801, 596);
         maintable = new QTableView(sortby_category);
         maintable->setObjectName(QString::fromUtf8("maintable"));
-        maintable->setGeometry(QRect(50, 50, 701, 501));
+        maintable->setGeometry(QRect(10, 10, 781, 531));
+        pushButton = new QPushButton(sortby_category);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(350, 550, 93, 28));
 
         retranslateUi(sortby_category);
 
@@ -39,6 +44,7 @@ public:
     void retranslateUi(QDialog *sortby_category)
     {
         sortby_category->setWindowTitle(QCoreApplication::translate("sortby_category", "Dialog", nullptr));
+        pushButton->setText(QCoreApplication::translate("sortby_category", "Back", nullptr));
     } // retranslateUi
 
 };

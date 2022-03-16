@@ -15,6 +15,9 @@ public:
     explicit sortby_category(QWidget *parent = nullptr);
     ~sortby_category();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::sortby_category *ui;
 };

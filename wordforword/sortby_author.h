@@ -15,6 +15,9 @@ public:
     explicit sortby_author(QWidget *parent = nullptr);
     ~sortby_author();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::sortby_author *ui;
 };

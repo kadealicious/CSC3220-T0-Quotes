@@ -47,6 +47,9 @@ void addquote::on_pushButton_clicked()
 
 void addquote::on_pushButton_2_clicked()
 {
+    // QSqlQuery query;
+    // query.prepare("INSERT INTO quote (authorID, categoryID, quote_string) VALUES ()");
+
     this->close();
 }
 

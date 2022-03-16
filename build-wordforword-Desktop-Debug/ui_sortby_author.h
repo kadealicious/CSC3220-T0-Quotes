@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
@@ -21,6 +22,7 @@ class Ui_sortby_author
 {
 public:
     QTableView *tableView;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *sortby_author)
     {
@@ -29,7 +31,10 @@ public:
         sortby_author->resize(801, 593);
         tableView = new QTableView(sortby_author);
         tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(50, 50, 451, 501));
+        tableView->setGeometry(QRect(10, 10, 781, 531));
+        pushButton = new QPushButton(sortby_author);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(370, 550, 93, 28));
 
         retranslateUi(sortby_author);
 
@@ -39,6 +44,7 @@ public:
     void retranslateUi(QDialog *sortby_author)
     {
         sortby_author->setWindowTitle(QCoreApplication::translate("sortby_author", "Dialog", nullptr));
+        pushButton->setText(QCoreApplication::translate("sortby_author", "Back", nullptr));
     } // retranslateUi
 
 };
